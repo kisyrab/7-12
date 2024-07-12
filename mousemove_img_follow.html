@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스를 따라다니는 마리오</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+        .mario{
+            width: 50px; height: 50px;
+            position: relative;
+            float: right;
+        }
+
+        .mario img {width: 100%;}
+    </style>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $("html, body").mousemove(function(e){
+                // console.log(e)
+                // console.log("x : ",e.pageX)
+                console.log("y : ",e.pageY)
+
+                // var x = e.pageX
+                var y = e.pageY
+
+                $(".mario").css({top: y, /* left : x */})
+
+            })//mousemove
+        }) //j
+    </script>
+
+
+</head>
+<body>
+    <div class="mario">
+        <img src="img/icon01.png" alt="mario">
+    </div>
+</body>
+</html>

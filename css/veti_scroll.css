@@ -1,0 +1,120 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'HSJiptokki-Round';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSJiptokki-Round.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MoiraiOne-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/MoiraiOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+    background-color: #FFC0D9;
+    color: rgb(78, 78, 78);
+    font-family: 'RixInooAriDuriR';
+}
+
+html, body{height: 100%;}
+
+.wrap{}
+#header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+
+}
+
+
+
+.nav, .f_nav{
+    position: absolute;
+    left: 0; top: 0;
+    height: 100px; width: 100%;
+    background-color: #8acdd7bb;
+    color: #FF90BC;
+    transition: all 0.5s;
+}
+
+.nav{
+    background-color: #F9F9E0;
+    text-shadow: 0 3px 0 #97f1ff91;
+}
+    .nav.on{top: -100px !important;}
+
+.f_nav{
+    top: -100px !important;
+    text-shadow: 0 3px 0 #F9F9E0; 
+}
+    .f_nav.on{top: 0 !important;}
+
+.nav ul, .f_nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.nav ul li, .f_nav ul li{
+
+}
+
+.nav ul li a, .f_nav ul li a{
+    font-size: 2rem;
+}
+
+
+.container{
+    position: fixed;
+    top: 0;
+}
+
+.container .page{
+    width: 100vw; /* 스크롤바까지의 길이 */
+    height: 100vh;
+    padding: 150px;
+    box-sizing: border-box;
+    border:  5px solid #FF90BC;
+}
+
+.container .page h1{
+    text-align: center;
+    font-size: 18rem;
+    font-family: 'MoiraiOne-Regular';
+    color: #ff5b9c;
+    text-shadow: 0 6px 0 #F9F9E0;
+}
+
+.btn_group{
+    position: fixed;
+    top: 350px; right: 20px;
+}
+.btn_group ul{}
+.btn_group ul li{
+    margin-bottom: 20px;
+}
+.btn_group ul li a{
+    display: block;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background-color: #F9F9E0;
+    text-indent: -9999px;
+}
+
+.btn_group ul li.on a{
+    background-color: #ff5b9c;
+}

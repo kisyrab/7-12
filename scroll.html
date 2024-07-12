@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면사이즈로 스크롤</title>
+
+<style>
+    *{margin: 0; padding: 0;}
+    ul, li{list-style: none;}
+    ul, li{height: 1000px; border: 5px solid gray; font-size: 7rem;}
+
+    .list3{position: relative;}
+
+    .box{
+        width: 300px; height: 300px;
+        background-color: rgb(30, 155, 19);
+        position: absolute;
+        left: 600px; top: 200px;
+    }
+
+</style>
+
+<script src="js/jquery-3.7.1.js"></script>
+<script lang="java">
+    $(function(){
+
+        // 웹페이지 전체에서 각 개체의 위치를 아는 방법
+        //왜 필요한가?
+        //한 화면 단위로 이동 명령어 작성시 단위 파악에 필요
+
+        var off = $(".list3").offset();
+        console.log("off : ", off);
+        
+            var off_top = $(".list3").offset().top
+            console.log("off_top : ", off_top);
+            
+            var box_off = $(".list3 .box").offset();
+            console.log("box_off : ", box_off);
+        
+        var box_pos = $(".box").position();
+        console.log("box : ", box_pos);
+        
+            var box_pos_top = $(".box").position().top;
+            console.log("box_top : ", box_pos_top);
+
+    
+    })//j
+
+</script>
+
+</head>
+<body>
+    <div class="wrap">
+
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li class="list3">menu3
+                <div class="box">box</div>
+            </li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+
+    
+
+
+</body>
+</html>
